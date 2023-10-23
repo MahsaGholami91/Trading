@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="bootstrap-4.6.2/css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="main-flax">
+            <div class="menuBar">
+                <a href=""><i class="far fa-thin fa-file fa-xl"></i></a>
+
+                <a href=""><i class="far fa-thin fa-clock fa-xl"></i></a>
+                <a href=""><i class="fas fa-thin fa-file-circle-plus fa-xl"></i></a>
+                <a href=""><i class="fas fa-thin fa-layer-group fa-xl"></i></a>
+                <a href=""><i class="far fa-brands fa-gripfire fa-xl"></i></a>
+                <a href=""><i class="far fa-thin fa-calendar fa-xl"></i></a>
+                <a href=""><i class="far fa-thin fa-lightbulb fa-xl"></i></a>
+                <a href=""><i class="far fa-thin fa-comments fa-xl"></i></a>
+                <a href=""><i class="fas fa-thin fa-land-mine-on fa-xl"></i></a>
+                <a href=""><i class="fas fa-thin fa-play fa-xl"></i></a>
+                <a href=""><i class="far fa-thin fa-bell fa-xl"></i></a>
+                <a href=""><i class="far fa-thin fa-circle-question fa-xl"></i></a>
+
+
+            </div>
+            <div class="watchingList">
+                <div class="setting">
+                    <div class="left-side">
+
+                        <div class="btn-setting" >
+                            <div class="set-toggle" onclick="toggleSettingDropdown()">
+                                <i class="fas fa-solid fa-ellipsis fa-xl" ></i>
+
+                            </div>
+
+                            <ul class="setting-content" id="setting-dropdown">
+                                <li>
+                                    <a href="">
+                                        <span class="fas fa-copy"></span> کپی فایل
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="fas fa-solid fa-pencil"></span> ویرایش نام فایل
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="fas fa-solid fa-broom"></span> پاک کردن لیست
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="fas fa-solid fa-diagram-predecessor"></span> اضافه کردن بخش جدید
+                                    </a>
+                                </li>
+                                <div class="dropdown-divider"></div>
+                             
+                                  <div class="custom-control custom-switch">
+                                      <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                      <label class="custom-control-label" for="customSwitch1">تغییر جدول</label>
+                                  </div>
+                                <div class="dropdown-divider"></div>
+
+                                <h6>سفارشی کردن ستون</h6>
+                                <div class="columns-style">
+                                    <label for="">
+                                        <input type="checkbox" name="" id="">
+                                        آخرین
+                                        
+                                    </label>
+                                    <label for=""><input type="checkbox" name="" id=""> تغییر
+                                        
+                                    </label>
+                                    <label for=""><input type="checkbox" name="" id=""> درصد تغییر
+                                        
+                                    </label>
+                                    <label for=""><input type="checkbox" name="" id=""> حجم
+                                        
+                                    </label>
+                                    <label for=""><input type="checkbox" name="" id=""> ساعت های طولانی
+                                        
+                                    </label>
+
+                                </div>
+                                <div class="dropdown-divider"></div>
+
+                                <h6>نمایش برند</h6>
+                                <div class="columns-style">
+                                    <label for=""> <input type="checkbox" name="" id=""> لوگو
+                                        
+                                    </label>
+                                    <label for=""><input type="radio" name="" id=""> تیک
+                                        
+                                    </label>
+                                    <label for=""><input type="radio" name="" id=""> توضیحات
+                                        
+                                    </label>
+                                    
+
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="btn-add">
+                            <i class="fas fa-solid fa-plus fa-xl"></i>
+                        </div>
+
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            لیست پیگیری
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right text-right">
+                            <button class="dropdown-item" type="button">افزودن لیست جدید</button>
+                            <button class="dropdown-item" type="button">آپلود لیست</button>
+                            <div class="dropdown-divider"></div>
+
+                            <button class="dropdown-item" type="button">لیست پیگیری
+                                <span>33</span>
+                            </button>
+                            <div class="dropdown-divider"></div>
+
+                            <button class="dropdown-item" type="button">حذف شده ها
+                                <span>3</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <table class="table table-condensed table-striped" >
+                    <thead class="main-head">
+                        <tr>
+                            <th style="width: 25%;">برند</th>
+                            <th style="width: 25%;">آخرین</th>
+                            <th style="width: 25%;">سی اچ جی</th>
+                            <th style="width: 25%;">درصد سی اچ جی</th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="main-body">
+                        <tr  data-toggle="collapse" data-target="#demo1" class="accordion-toggle  collapsed">
+                            <td span="4"><i class="fa-solid fa-chevron-down"></i><span>Carlos</span></td>
+                        </tr>
+                 
+                        <tr class="hidden-tr">
+                            <td colspan="12" class="hiddenRow">
+                                <div class="accordian-body collapse" id="demo1">
+                                    <table class="table table-striped table-condensed hiddenTable table-drag" >
+                                        <tbody class="hiddenBody">
+                                            <tr data-toggle="collapse" class="accordion-toggle" data-target="#demo10">
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>MNM</td>
+                                                <td>U$8.00000 </td>
+                                                <td> /09/27</td>
+                                                <td> /09/27</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>SDF</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016//27</td>
+                                                <td> 2017//27</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>BVC</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016/09/</td>
+                                                <td> 2017/09/</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>NBH</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016/09/27</td>
+                                                <td> 2017/09/27</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+
+
+
+                        <tr data-toggle="collapse" data-target="#demo2" class="accordion-toggle  collapsed">
+                            <td span="4"><i class="fa-solid fa-chevron-down"></i><span>Silvio</span></td>
+                           
+                        </tr>
+                        <tr class="hidden-tr">
+                            <td colspan="12" class="hiddenRow">
+                                <div class="accordian-body collapse" id="demo2">
+                                    <table class="table table-striped table-condensed hiddenTable table-drag" >
+                                        <tbody class="hiddenBody">
+                                            <tr data-toggle="collapse" class="accordion-toggle" data-target="#demo10">
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>RTY</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016/09/27</td>
+                                                <td> 2017/09/27</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>SUY</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016/09/27</td>
+                                                <td> 2017/09/27</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>KJU</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016/09/27</td>
+                                                <td> 2017/09/27</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>KIU</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2018/09/28</td>
+                                                <td> 2017/09/27</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-toggle="collapse" data-target="#demo3" class="accordion-toggle  collapsed">
+                            <td span="4"><i class="fa-solid fa-chevron-down"></i><span>John</span></td>
+                            
+                        </tr>
+                        <tr class="hidden-tr">
+                            <td colspan="12" class="hiddenRow">
+                                <div class="accordian-body collapse" id="demo3">
+                                    <table class="table table-striped table-condensed hiddenTable table-drag" >
+                                        <tbody class="hiddenBody">
+                                            <tr data-toggle="collapse" class="accordion-toggle" data-target="#demo10">
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>POI</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016/09/27</td>
+                                                <td> 2017/09/27</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>POL</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016/09/27</td>
+                                                <td> 2017/09/27</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>PIU</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016/09/27</td>
+                                                <td> 2017/09/27</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>IUO</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016/09/27</td>
+                                                <td> 2017/09/27</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table> -->
+
+
+                <table class="table table-condensed table-striped table-drag" >
+                    <thead class="main-head">
+                        <tr>
+                            <th style="width: 25%;">برند</th>
+                            <th style="width: 25%;">آخرین</th>
+                            <th style="width: 25%;">سی اچ جی</th>
+                            <th style="width: 25%;">درصد سی اچ جی</th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="main-body">
+                        <tr  data-toggle="collapse" data-target="#demo1" class="accordion-toggle  collapsed">
+                            <td span="4"><i class="fa-solid fa-chevron-down"></i><span>Carlos</span></td>
+                        </tr>
+
+
+                        <div>
+
+                            <tr data-toggle="collapse" class="accordion-toggle" data-target="#demo10">
+                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>MNM</td>
+                                <td>U$8.00000 </td>
+                                <td> /09/27</td>
+                                <td> /09/27</td>
+                            </tr>
+    
+                            <tr>
+                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>SDF</td>
+                                <td>U$8.00000 </td>
+                                <td> 2016//27</td>
+                                <td> 2017//27</td>
+                            </tr>
+    
+                            <tr>
+                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>BVC</td>
+                                <td>U$8.00000 </td>
+                                <td> 2016/09/</td>
+                                <td> 2017/09/</td>
+                            </tr>
+    
+                            <tr>
+                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>NBH</td>
+                                <td>U$8.00000 </td>
+                                <td> 2016/09/27</td>
+                                <td> 2017/09/27</td>
+                            </tr>
+                        </div>
+
+
+                        <tr data-toggle="collapse" data-target="#demo2" class="accordion-toggle  collapsed">
+                            <td span="4"><i class="fa-solid fa-chevron-down"></i><span>Silvio</span></td>
+                           
+                        </tr>
+
+                        <tr data-toggle="collapse" class="accordion-toggle" data-target="#demo10">
+                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>RTY</td>
+                            <td>U$8.00000 </td>
+                            <td> 2016/09/27</td>
+                            <td> 2017/09/27</td>
+                        </tr>
+
+                        <tr>
+                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>SUY</td>
+                            <td>U$8.00000 </td>
+                            <td> 2016/09/27</td>
+                            <td> 2017/09/27</td>
+                        </tr>
+
+                        <tr>
+                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>KJU</td>
+                            <td>U$8.00000 </td>
+                            <td> 2016/09/27</td>
+                            <td> 2017/09/27</td>
+                        </tr>
+
+                        <tr>
+                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>KIU</td>
+                            <td>U$8.00000 </td>
+                            <td> 2018/09/28</td>
+                            <td> 2017/09/27</td>
+                        </tr>
+
+
+                        <tr data-toggle="collapse" data-target="#demo3" class="accordion-toggle  collapsed">
+                            <td span="4"><i class="fa-solid fa-chevron-down"></i><span>John</span></td>
+                            
+                        </tr>
+
+                        <tr data-toggle="collapse" class="accordion-toggle" data-target="#demo10">
+                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>POI</td>
+                            <td>U$8.00000 </td>
+                            <td> 2016/09/27</td>
+                            <td> 2017/09/27</td>
+                        </tr>
+
+                        <tr>
+                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>POL</td>
+                            <td>U$8.00000 </td>
+                            <td> 2016/09/27</td>
+                            <td> 2017/09/27</td>
+                        </tr>
+
+                        <tr>
+                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>PIU</td>
+                            <td>U$8.00000 </td>
+                            <td> 2016/09/27</td>
+                            <td> 2017/09/27</td>
+                        </tr>
+
+                        <tr>
+                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>IUO</td>
+                            <td>U$8.00000 </td>
+                            <td> 2016/09/27</td>
+                            <td> 2017/09/27</td>
+                        </tr>
+
+                 
+                        <!-- <tr class="hidden-tr">
+                            <td colspan="12" class="hiddenRow">
+                                <div class="accordian-body collapse" id="demo1">
+                                    <table class="table table-striped table-condensed hiddenTable table-drag" >
+                                        <tbody class="hiddenBody">
+                                            <tr data-toggle="collapse" class="accordion-toggle" data-target="#demo10">
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>MNM</td>
+                                                <td>U$8.00000 </td>
+                                                <td> /09/27</td>
+                                                <td> /09/27</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>SDF</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016//27</td>
+                                                <td> 2017//27</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>BVC</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016/09/</td>
+                                                <td> 2017/09/</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>NBH</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016/09/27</td>
+                                                <td> 2017/09/27</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-toggle="collapse" data-target="#demo2" class="accordion-toggle  collapsed">
+                            <td span="4"><i class="fa-solid fa-chevron-down"></i><span>Silvio</span></td>
+                           
+                        </tr>
+                        <tr class="hidden-tr">
+                            <td colspan="12" class="hiddenRow">
+                                <div class="accordian-body collapse" id="demo2">
+                                    <table class="table table-striped table-condensed hiddenTable table-drag" >
+                                        <tbody class="hiddenBody">
+                                            <tr data-toggle="collapse" class="accordion-toggle" data-target="#demo10">
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>RTY</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016/09/27</td>
+                                                <td> 2017/09/27</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>SUY</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016/09/27</td>
+                                                <td> 2017/09/27</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>KJU</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016/09/27</td>
+                                                <td> 2017/09/27</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>KIU</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2018/09/28</td>
+                                                <td> 2017/09/27</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-toggle="collapse" data-target="#demo3" class="accordion-toggle  collapsed">
+                            <td span="4"><i class="fa-solid fa-chevron-down"></i><span>John</span></td>
+                            
+                        </tr>
+                        <tr class="hidden-tr">
+                            <td colspan="12" class="hiddenRow">
+                                <div class="accordian-body collapse" id="demo3">
+                                    <table class="table table-striped table-condensed hiddenTable table-drag" >
+                                        <tbody class="hiddenBody">
+                                            <tr data-toggle="collapse" class="accordion-toggle" data-target="#demo10">
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>POI</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016/09/27</td>
+                                                <td> 2017/09/27</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>POL</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016/09/27</td>
+                                                <td> 2017/09/27</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>PIU</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016/09/27</td>
+                                                <td> 2017/09/27</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>IUO</td>
+                                                <td>U$8.00000 </td>
+                                                <td> 2016/09/27</td>
+                                                <td> 2017/09/27</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+
+
+<!-- 
+                <table class="watchingTable" id="table-1" cellspacing="0" cellpadding="2">
+                    <thead>
+                        <tr>
+                            <th>برند</th>
+                            <th>آخرین</th>
+                            <th>سی اچ جی</th>
+                            <th>درصد سی اچ جی</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="1">
+                            <td>SPX</td>
+                            <td>4343</td>
+                            <td>-43.90</td>
+                            <td>2.90%</td>
+                        </tr>
+                        <tr id="2">
+                            <td>VIX</td>
+                            <td>4343</td>
+                            <td>-43.90</td>
+                            <td>2.90%</td>
+                        </tr>
+                        <tr id="3">
+                            <td>DXY</td>
+                            <td>4343</td>
+                            <td>-43.90</td>
+                            <td>2.90%</td>
+                        </tr>
+                        <tr id="4">
+                            <td>AAPL</td>
+                            <td>4343</td>
+                            <td>-43.90</td>
+                            <td>2.90%</td>
+                        </tr>
+                        <tr id="5">
+                            <td>NFLX</td>
+                            <td>4343</td>
+                            <td>-43.90</td>
+                            <td>2.90%</td>
+                        </tr>
+                        <tr id="6">
+                            <td>TSLA</td>
+                            <td>4343</td>
+                            <td>-43.90</td>
+                            <td>2.90%</td>
+                        </tr>
+                    </tbody>
+
+                </table> -->
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="bootstrap-4.6.2/js/bootstrap.min.js"></script>
+    <script src="bootstrap-4.6.2/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqgrid/4.6.0/plugins/jquery.tablednd.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Initialise the table
+            $(".table-drag").tableDnD();
+
+
+            $('.dropdown-toggle').dropdown();
+
+
+                       
+        });
+
+        function toggleSettingDropdown() {
+            var dropdown = document.getElementById("setting-dropdown");
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            } else {
+                dropdown.style.display = "block";
+            }
+        }
+
+  
+    </script>
+</body>
+
+</html>
