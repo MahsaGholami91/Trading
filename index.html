@@ -37,84 +37,90 @@
             <div class="watchingList">
                 <div class="setting">
                     <div class="left-side">
-
-                        <div class="btn-setting" >
-                            <div class="set-toggle" onclick="toggleSettingDropdown()">
-                                <i class="fas fa-solid fa-ellipsis fa-xl" ></i>
-
-                            </div>
-
-                            <ul class="setting-content" id="setting-dropdown">
-                                <li>
-                                    <a href="">
-                                        <span class="fas fa-copy"></span> کپی فایل
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="fas fa-solid fa-pencil"></span> ویرایش نام فایل
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="fas fa-solid fa-broom"></span> پاک کردن لیست
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="fas fa-solid fa-diagram-predecessor"></span> اضافه کردن بخش جدید
-                                    </a>
-                                </li>
-                                <div class="dropdown-divider"></div>
-                             
-                                  <div class="custom-control custom-switch">
-                                      <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                      <label class="custom-control-label" for="customSwitch1">تغییر جدول</label>
-                                  </div>
-                                <div class="dropdown-divider"></div>
-
-                                <h6>سفارشی کردن ستون</h6>
-                                <div class="columns-style">
-                                    <label for="">
-                                        <input type="checkbox" name="" id="">
-                                        آخرین
-                                        
-                                    </label>
-                                    <label for=""><input type="checkbox" name="" id=""> تغییر
-                                        
-                                    </label>
-                                    <label for=""><input type="checkbox" name="" id=""> درصد تغییر
-                                        
-                                    </label>
-                                    <label for=""><input type="checkbox" name="" id=""> حجم
-                                        
-                                    </label>
-                                    <label for=""><input type="checkbox" name="" id=""> ساعت های طولانی
-                                        
-                                    </label>
-
-                                </div>
-                                <div class="dropdown-divider"></div>
-
-                                <h6>نمایش برند</h6>
-                                <div class="columns-style">
-                                    <label for=""> <input type="checkbox" name="" id=""> لوگو
-                                        
-                                    </label>
-                                    <label for=""><input type="radio" name="" id=""> تیک
-                                        
-                                    </label>
-                                    <label for=""><input type="radio" name="" id=""> توضیحات
-                                        
-                                    </label>
-                                    
-
-                                </div>
-                            </ul>
-                        </div>
                         <div class="btn-add">
                             <i class="fas fa-solid fa-plus fa-xl"></i>
                         </div>
+                        <div class="btn-group btn-setting">
+                            <button type="button" class="dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-solid fa-ellipsis fa-xl" ></i>
+                            </button>
+                            <!-- <div class="dropdown-menu dropdown-menu-right text-right " style="width: 140%;"> -->
+                                <ul class="dropdown-menu dropdown-menu-right text-right setting-content" id="setting-dropdown" style="   box-shadow: 0 6px 12px rgba(0, 0, 0, .175) !important;
+                                border-radius: 3px !important;">
+                                    <li>
+                                        <a href="">
+                                            <span class="fas fa-copy"></span> کپی فایل
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span class="fas fa-solid fa-pencil"></span> ویرایش نام فایل
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span class="fas fa-solid fa-broom"></span> پاک کردن لیست
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span class="fas fa-solid fa-diagram-predecessor"></span> اضافه کردن بخش جدید
+                                        </a>
+                                    </li>
+                                    <div class="dropdown-divider"></div>
+                                 
+                                      <div class="custom-control custom-switch">
+                                          <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                          <label class="custom-control-label" for="customSwitch1">تغییر جدول</label>
+                                      </div>
+                                    <div class="dropdown-divider"></div>
+    
+                                    <h6>سفارشی کردن ستون</h6>
+                                    <div class="columns-style">
+                                        <label for="">
+                                            <input type="checkbox" name="" id="">
+                                            آخرین
+                                            
+                                        </label>
+                                        <label for=""><input type="checkbox" name="" id=""> تغییر
+                                            
+                                        </label>
+                                        <label for=""><input type="checkbox" name="" id=""> درصد تغییر
+                                            
+                                        </label>
+                                        <label for=""><input type="checkbox" name="" id=""> حجم
+                                            
+                                        </label>
+                                        <label for=""><input type="checkbox" name="" id=""> ساعت های طولانی
+                                            
+                                        </label>
+    
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+    
+                                    <h6>نمایش برند</h6>
+                                    <div class="columns-style">
+                                        <label for=""> <input type="checkbox" name="" id=""> لوگو
+                                            
+                                        </label>
+                                        <label for=""><input type="radio" name="" id=""> تیک
+                                            
+                                        </label>
+                                        <label for=""><input type="radio" name="" id=""> توضیحات
+                                            
+                                        </label>
+                                        
+    
+                                    </div>
+                                </ul>
+    
+                            <!-- </div> -->
+                        </div>
+                   
+
+
+                       
 
                     </div>
                     <div class="btn-group">
@@ -122,19 +128,26 @@
                             aria-haspopup="true" aria-expanded="false">
                             لیست پیگیری
                         </button>
-                        <div class="dropdown-menu dropdown-menu-right text-right">
-                            <button class="dropdown-item" type="button">افزودن لیست جدید</button>
-                            <button class="dropdown-item" type="button">آپلود لیست</button>
+                        <div class="dropdown-menu dropdown-menu-right text-right " style="width: 140%;">
+                            <div class="item-flex-re">
+                                <a class="dropdown-item" type="button"><i class="fas fa-thin fa-file-circle-plus "></i>افزودن لیست جدید</a>
+                                
+                            </div>
+                            <div class="item-flex-re">
+                                <a class="dropdown-item" type="button"> <i class="fa-solid fa-arrow-up-from-bracket" ></i>آپلود لیست</a>
+                                
+                            </div>
                             <div class="dropdown-divider"></div>
-
-                            <button class="dropdown-item" type="button">لیست پیگیری
-                                <span>33</span>
-                            </button>
+                            <div class="item-flex">
+                                <a class="dropdown-item" type="button">لیست پیگیری <span >33</span></a> 
+                                
+                            </div>
                             <div class="dropdown-divider"></div>
+                            <div class="item-flex">
+                                <a class="dropdown-item" type="button">حذف شده ها  <span >3</span></a>
+                               
+                            </div>
 
-                            <button class="dropdown-item" type="button">حذف شده ها
-                                <span>3</span>
-                            </button>
                         </div>
                     </div>
                 </div>
