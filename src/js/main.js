@@ -1,3 +1,6 @@
+
+// start resizable
+
 (function () {
     "use strict";
   
@@ -148,3 +151,83 @@
     })();
   })();
   
+
+  // End resizable
+
+
+//   Start dark mode
+
+$(document).ready(function () {
+    $("#color_mode").on("change", function () {
+        colorModePreview(this);
+    })
+});
+
+function colorModePreview(ele) {
+    if ($(ele).prop("checked") == true) {
+        $('body').addClass('dark-preview');
+        $('body').removeClass('white-preview');
+    }
+    else if ($(ele).prop("checked") == false) {
+        $('body').addClass('white-preview');
+        $('body').removeClass('dark-preview');
+    }
+}
+
+// End dark mode
+
+
+
+function test(classname) {
+    // Get all div elements
+    const divs = document.querySelectorAll('.tr-row');
+
+    // Initialize variables to keep track of the first 'first' class and first 'stop' class
+    let firstFound = false;
+    let stopFound = false;
+
+    // Loop through the div elements
+    for (const div of divs) {
+
+        console.log(div.classList);
+        console.log(classname);
+        console.log(div.classList.contains(classname));
+        if (div.classList.contains(classname)) {
+            // If the div has the 'first' class, mark it as found
+            firstFound = true;
+        } else if (firstFound && div.classList.contains('category')) {
+            // If the div has the 'stop' class, mark it as found and break the loop
+            stopFound = true;
+            break;
+        } else if (firstFound && !stopFound) {
+            // If 'first' class is found and 'stop' class is not found yet, add 'active' class to 'flow' divs
+            if (div.classList.contains('hidden')) {
+                div.classList.remove('hidden');
+            } else {
+                div.classList.add('hidden');
+            }
+
+        }
+    }
+}
+
+
+$(document).ready(function () {
+    // Initialise the table
+    $(".table-drag").tableDnD();
+
+
+    $('.dropdown-toggle').dropdown();
+
+
+
+});
+
+function toggleSettingDropdown() {
+    var dropdown = document.getElementById("setting-dropdown");
+    if (dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+    } else {
+        dropdown.style.display = "block";
+    }
+}

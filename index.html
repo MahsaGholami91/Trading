@@ -13,12 +13,12 @@
 
 </head>
 
-<body >
-
+<body class="white-preview">
     <div id="app" class="main-container">
         <div class="resizable-x main-flax">
-            <div class="menuBar" style="position: sticky;">
-                <div class="menuBar-first">
+            <!-- right sidebar -->
+            <div class="menubar" style="position: sticky;">
+                <div class="menubar-first">
                     <a href=""><i class="far fa-thin fa-file fa-xl"></i></a>
                     <a href=""><i class="far fa-thin fa-clock fa-xl"></i></a>
                     <a href=""><i class="fas fa-thin fa-file-circle-plus fa-xl"></i></a>
@@ -31,14 +31,15 @@
                     <a href=""><i class="fas fa-thin fa-play fa-xl"></i></a>
                     <a href=""><i class="far fa-thin fa-bell fa-xl"></i></a>
                 </div>
-                <div class="menuBar-last">
+                <div class="menubar-last">
                     <a href=""><i class="far fa-thin fa-circle-question fa-xl"></i></a>
                 </div>
             </div>
+
+
+            <!-- table blok -->
             <div class="resizable-y" style="flex: 50%;">
-                <!-- <div class="div1 watchingList" style="flex: 33.33%;"> -->
-                <div class="div1 watchingList" style="flex: 90%;">
-                    <!-- <div class="watchingList"> -->
+                <div class="div1 watching-list" style="flex: 90%;">
                     <div class="setting">
                         <div class="left-side">
                             <div class="btn-add">
@@ -49,11 +50,10 @@
                                     aria-haspopup="true" aria-expanded="false">
                                     <i class="fas fa-solid fa-ellipsis fa-xl"></i>
                                 </button>
+                                
                                 <ul class="left-dropdown dropdown-menu dropdown-menu-right text-right setting-content"
-                                    id="setting-dropdown" style="box-shadow: 0 6px 12px rgba(0, 0, 0, .175) !important;     
-                                        /* left: 218px !important; */
-                                        /* border-radius: 3px !important;" */
-                                        >
+                                    id="setting-dropdown"
+                                    style="box-shadow: 0 6px 12px rgba(0, 0, 0, .175) !important; ">
                                     <li>
                                         <a href="">
                                             <span class="fas fa-copy"></span> کپی فایل
@@ -75,6 +75,7 @@
                                             جدید
                                         </a>
                                     </li>
+
                                     <div class="dropdown-divider"></div>
                                     <div class="switch-flex">
                                         <label for="">تغییر جدول</label>
@@ -84,65 +85,66 @@
                                         </label>
 
                                     </div>
+                                    <div class="switch-flex">
+                                        <label for=""> حالت شب</label>
 
+                                        <label class="switch btn-color-mode-switch">
+                                            <input type="checkbox" name="color_mode" id="color_mode" value="1">
+                                            <label for="color_mode" class="btn-color-mode-switch-inner"></label>
+                                        </label>
+                                    </div>
                                     <div class="dropdown-divider"></div>
 
                                     <h6>سفارشی کردن ستون</h6>
                                     <div class="columns-style">
-                                        <label for="">
-                                            <input type="checkbox" name="" id="">
-                                            آخرین
-
+                                        <label for=""><input type="checkbox" name="" id="">آخرین
                                         </label>
+
                                         <label for=""><input type="checkbox" name="" id=""> تغییر
-
                                         </label>
+
                                         <label for=""><input type="checkbox" name="" id=""> درصد تغییر
-
                                         </label>
+
                                         <label for=""><input type="checkbox" name="" id=""> حجم
-
                                         </label>
+
                                         <label for=""><input type="checkbox" name="" id=""> ساعت های طولانی
-
                                         </label>
-
                                     </div>
+
                                     <div class="dropdown-divider"></div>
 
                                     <h6>نمایش برند</h6>
                                     <div class="columns-style">
                                         <label for=""> <input type="checkbox" name="" id=""> لوگو
-
                                         </label>
+
                                         <label for=""><input type="radio" name="" id=""> تیک
-
                                         </label>
+
                                         <label for=""><input type="radio" name="" id=""> توضیحات
-
                                         </label>
-
-
                                     </div>
                                 </ul>
-
                             </div>
-
                         </div>
+
                         <div class="btn-group">
-                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 لیست پیگیری
                             </button>
                             <div class="dropdown-menu dropdown-menu-right text-right " style="width: 140%;">
                                 <div class="item-flex-re">
-                                    <a class="dropdown-item" type="button"><i
-                                            class="fas fa-thin fa-file-circle-plus "></i>افزودن لیست جدید</a>
+                                    <a class="dropdown-item" type="button">
+                                        <i class="fas fa-thin fa-file-circle-plus "></i>افزودن لیست جدید
+                                    </a>
 
                                 </div>
                                 <div class="item-flex-re">
-                                    <a class="dropdown-item" type="button"> <i
-                                            class="fa-solid fa-arrow-up-from-bracket"></i>آپلود لیست</a>
+                                    <a class="dropdown-item" type="button"> 
+                                        <i class="fa-solid fa-arrow-up-from-bracket"></i>آپلود لیست
+                                    </a>
 
                                 </div>
                                 <div class="dropdown-divider"></div>
@@ -153,7 +155,6 @@
                                 <div class="dropdown-divider"></div>
                                 <div class="item-flex">
                                     <a class="dropdown-item" type="button">حذف شده ها <span>3</span></a>
-
                                 </div>
 
                             </div>
@@ -172,12 +173,13 @@
 
                         <tbody class="main-body">
                             <tr onclick="test('first-row')" class="first-row tr-row category" data-toggle="collapse"
-                                data-target="#demo1" class="accordion-toggle  collapsed">
+                                data-target="#tbl1" class="accordion-toggle  collapsed">
                                 <td span="4"><i class="fa-solid fa-chevron-down"></i><span>Carlos</span></td>
                             </tr>
 
 
-                            <tr class="tr-row mgo" data-toggle="collapse" class="accordion-toggle" data-target="#demo10">
+                            <tr class="tr-row mgo" data-toggle="collapse" class="accordion-toggle"
+                                data-target="#tbl4">
                                 <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>MNM</td>
                                 <td>786 </td>
                                 <td>890</td>
@@ -185,21 +187,21 @@
                             </tr>
 
                             <tr class="tr-row mgo">
-                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>SDF</td>
+                                <td><span><img class="table-logo-img" src="./10wmt-articleLarge-v4.webp" alt=""></span>SDF</td>
                                 <td>786 </td>
                                 <td>89</td>
                                 <td>86%</td>
                             </tr>
 
                             <tr class="tr-row mgo">
-                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>BVC</td>
+                                <td><span><img class="table-logo-img" src="./1657548367Facebook-logo.png" alt=""></span>BVC</td>
                                 <td>76 </td>
                                 <td>89</td>
                                 <td>90%</td>
                             </tr>
 
                             <tr class="tr-row mgo">
-                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>NBH</td>
+                                <td><span><img class="table-logo-img" src="./apple.avif" alt=""></span>NBH</td>
                                 <td>786 </td>
                                 <td>890</td>
                                 <td>89%</td>
@@ -207,34 +209,35 @@
 
 
                             <tr onclick="test('second-row')" class="second-row tr-row category" data-toggle="collapse"
-                                data-target="#demo2" class="accordion-toggle  collapsed">
+                                data-target="#tbl2" class="accordion-toggle  collapsed">
                                 <td span="4"><i class="fa-solid fa-chevron-down"></i><span>Silvio</span></td>
 
                             </tr>
 
-                            <tr class="tr-row mgo" data-toggle="collapse" class="accordion-toggle" data-target="#demo10">
-                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>RTY</td>
+                            <tr class="tr-row mgo" data-toggle="collapse" class="accordion-toggle"
+                                data-target="#tbl4">
+                                <td><span><img class="table-logo-img" src="./b9ddf9536d8a70a312936b0027cd1e01.png" alt=""></span>RTY</td>
                                 <td>76 </td>
                                 <td>89</td>
                                 <td>89%</td>
                             </tr>
 
                             <tr class="tr-row mgo">
-                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>SUY</td>
+                                <td><span><img class="table-logo-img" src="./Superman_shield.svg.png" alt=""></span>SUY</td>
                                 <td>786 </td>
                                 <td>890</td>
                                 <td>89%</td>
                             </tr>
 
                             <tr class="tr-row mgo">
-                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>KJU</td>
+                                <td><span><img class="table-logo-img" src="./pepsi.png" alt=""></span>KJU</td>
                                 <td>76 </td>
                                 <td>90</td>
                                 <td>89%</td>
                             </tr>
 
                             <tr class="tr-row mgo">
-                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>KIU</td>
+                                <td><span><img class="table-logo-img" src="./exl-04-media-hd-m16.webp" alt=""></span>KIU</td>
                                 <td>786 </td>
                                 <td>80</td>
                                 <td>89%</td>
@@ -242,69 +245,56 @@
 
 
                             <tr onclick="test('third-row')" class="third-row tr-row category" data-toggle="collapse"
-                                data-target="#demo3" class="accordion-toggle  collapsed">
+                                data-target="#tbl3" class="accordion-toggle  collapsed">
                                 <td span="4"><i class="fa-solid fa-chevron-down"></i><span>John</span></td>
 
                             </tr>
 
-                            <tr class="tr-row mgo" data-toggle="collapse" class="accordion-toggle" data-target="#demo10">
-                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>POI</td>
+                            <tr class="tr-row mgo" data-toggle="collapse" class="accordion-toggle"
+                                data-target="#tbl4">
+                                <td><span><img class="table-logo-img" src="./10wmt-articleLarge-v4.webp" alt=""></span>POI</td>
                                 <td>09 </td>
                                 <td>890</td>
                                 <td>78%</td>
                             </tr>
 
                             <tr class="tr-row mgo">
-                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>POL</td>
+                                <td><span><img class="table-logo-img" src="./1657548367Facebook-logo.png" alt=""></span>POL</td>
                                 <td>97 </td>
                                 <td>78</td>
                                 <td>9%</td>
                             </tr>
 
                             <tr class="tr-row mgo">
-                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>PIU</td>
+                                <td><span><img class="table-logo-img" src="./Huawei-Logo.jpg" alt=""></span>PIU</td>
                                 <td>98 </td>
                                 <td>7</td>
                                 <td>89%</td>
                             </tr>
 
                             <tr class="tr-row mgo">
-                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>IUO</td>
+                                <td><span><img class="table-logo-img" src="./Mastercard_logo.jpg" alt=""></span>IUO</td>
                                 <td>54 </td>
                                 <td>3</td>
                                 <td>8%</td>
                             </tr>
                         </tbody>
                     </table>
-                    <!-- </div>                 -->
                 </div>
                 <div class="resizer-y"></div>
-                <!-- <div class="div2" style="flex: 66.66%;"> -->
                 <div class="div2" style="flex: 0.66%;">
                     <p>div 2</p>
                 </div>
             </div>
 
             <div class="resizer-x"></div>
+
+            <!-- chart blok -->
             <div class="div0" style="flex: 50%;">
                 <p>div 0</p>
             </div>
         </div>
     </div>
-
-
-    <div class="main-container">
-        <div class="main-flax">
-
-
-
-
-        </div>
-
-
-    </div>
-
-
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -314,68 +304,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqgrid/4.6.0/plugins/jquery.tablednd.js"></script>
     <script src="./src/js/main.js"></script>
 
-    <script>
-
-
-        function test(classname) {
-            // Get all div elements
-            const divs = document.querySelectorAll('.tr-row');
-
-            // Initialize variables to keep track of the first 'first' class and first 'stop' class
-            let firstFound = false;
-            let stopFound = false;
-
-            // Loop through the div elements
-            for (const div of divs) {
-
-                console.log(div.classList);
-                console.log(classname);
-                console.log(div.classList.contains(classname));
-                if (div.classList.contains(classname)) {
-                    // If the div has the 'first' class, mark it as found
-                    firstFound = true;
-                } else if (firstFound && div.classList.contains('category')) {
-                    // If the div has the 'stop' class, mark it as found and break the loop
-                    stopFound = true;
-                    break;
-                } else if (firstFound && !stopFound) {
-                    // If 'first' class is found and 'stop' class is not found yet, add 'active' class to 'flow' divs
-                    if (div.classList.contains('hidden')) {
-                        div.classList.remove('hidden');
-                    } else {
-                        div.classList.add('hidden');
-                    }
-
-                }
-            }
-        }
-
-
-    </script>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            // Initialise the table
-            $(".table-drag").tableDnD();
-
-
-            $('.dropdown-toggle').dropdown();
-
-
-
-        });
-
-        function toggleSettingDropdown() {
-            var dropdown = document.getElementById("setting-dropdown");
-            if (dropdown.style.display === "block") {
-                dropdown.style.display = "none";
-            } else {
-                dropdown.style.display = "block";
-            }
-        }
-
-
-    </script>
+  
 </body>
 
 </html>
