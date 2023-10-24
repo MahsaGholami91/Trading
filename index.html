@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -13,41 +13,47 @@
 
 </head>
 
-<body>
+<body >
 
-    <div class="main-container">
-        <div class="main-flax">
-            <div class="menuBar">
-                <a href=""><i class="far fa-thin fa-file fa-xl"></i></a>
-
-                <a href=""><i class="far fa-thin fa-clock fa-xl"></i></a>
-                <a href=""><i class="fas fa-thin fa-file-circle-plus fa-xl"></i></a>
-                <a href=""><i class="fas fa-thin fa-layer-group fa-xl"></i></a>
-                <a href=""><i class="far fa-brands fa-gripfire fa-xl"></i></a>
-                <a href=""><i class="far fa-thin fa-calendar fa-xl"></i></a>
-                <a href=""><i class="far fa-thin fa-lightbulb fa-xl"></i></a>
-                <a href=""><i class="far fa-thin fa-comments fa-xl"></i></a>
-                <a href=""><i class="fas fa-thin fa-land-mine-on fa-xl"></i></a>
-                <a href=""><i class="fas fa-thin fa-play fa-xl"></i></a>
-                <a href=""><i class="far fa-thin fa-bell fa-xl"></i></a>
-                <a href=""><i class="far fa-thin fa-circle-question fa-xl"></i></a>
-
-
+    <div id="app" class="main-container">
+        <div class="resizable-x main-flax">
+            <div class="menuBar" style="position: sticky;">
+                <div class="menuBar-first">
+                    <a href=""><i class="far fa-thin fa-file fa-xl"></i></a>
+                    <a href=""><i class="far fa-thin fa-clock fa-xl"></i></a>
+                    <a href=""><i class="fas fa-thin fa-file-circle-plus fa-xl"></i></a>
+                    <a href=""><i class="fas fa-thin fa-layer-group fa-xl"></i></a>
+                    <a href=""><i class="far fa-brands fa-gripfire fa-xl"></i></a>
+                    <a href=""><i class="far fa-thin fa-calendar fa-xl"></i></a>
+                    <a href=""><i class="far fa-thin fa-lightbulb fa-xl"></i></a>
+                    <a href=""><i class="far fa-thin fa-comments fa-xl"></i></a>
+                    <a href=""><i class="fas fa-thin fa-land-mine-on fa-xl"></i></a>
+                    <a href=""><i class="fas fa-thin fa-play fa-xl"></i></a>
+                    <a href=""><i class="far fa-thin fa-bell fa-xl"></i></a>
+                </div>
+                <div class="menuBar-last">
+                    <a href=""><i class="far fa-thin fa-circle-question fa-xl"></i></a>
+                </div>
             </div>
-            <div class="watchingList">
-                <div class="setting">
-                    <div class="left-side">
-                        <div class="btn-add">
-                            <i class="fas fa-solid fa-plus fa-xl"></i>
-                        </div>
-                        <div class="btn-group btn-setting">
-                            <button type="button" class="dropdown-toggle" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-solid fa-ellipsis fa-xl" ></i>
-                            </button>
-                            <!-- <div class="dropdown-menu dropdown-menu-right text-right " style="width: 140%;"> -->
-                                <ul class="dropdown-menu dropdown-menu-right text-right setting-content" id="setting-dropdown" style="   box-shadow: 0 6px 12px rgba(0, 0, 0, .175) !important;
-                                border-radius: 3px !important;">
+            <div class="resizable-y" style="flex: 50%;">
+                <!-- <div class="div1 watchingList" style="flex: 33.33%;"> -->
+                <div class="div1 watchingList" style="flex: 90%;">
+                    <!-- <div class="watchingList"> -->
+                    <div class="setting">
+                        <div class="left-side">
+                            <div class="btn-add">
+                                <i class="fas fa-solid fa-plus fa-xl"></i>
+                            </div>
+                            <div class="btn-group btn-setting">
+                                <button type="button" class="dropdown-toggle" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-solid fa-ellipsis fa-xl"></i>
+                                </button>
+                                <ul class="left-dropdown dropdown-menu dropdown-menu-right text-right setting-content"
+                                    id="setting-dropdown" style="box-shadow: 0 6px 12px rgba(0, 0, 0, .175) !important;     
+                                        /* left: 218px !important; */
+                                        /* border-radius: 3px !important;" */
+                                        >
                                     <li>
                                         <a href="">
                                             <span class="fas fa-copy"></span> کپی فایل
@@ -65,207 +71,234 @@
                                     </li>
                                     <li>
                                         <a href="">
-                                            <span class="fas fa-solid fa-diagram-predecessor"></span> اضافه کردن بخش جدید
+                                            <span class="fas fa-solid fa-diagram-predecessor"></span> اضافه کردن بخش
+                                            جدید
                                         </a>
                                     </li>
                                     <div class="dropdown-divider"></div>
-                                 
-                                      <div class="custom-control custom-switch">
-                                          <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                          <label class="custom-control-label" for="customSwitch1">تغییر جدول</label>
-                                      </div>
+                                    <div class="switch-flex">
+                                        <label for="">تغییر جدول</label>
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+
+                                    </div>
+
                                     <div class="dropdown-divider"></div>
-    
+
                                     <h6>سفارشی کردن ستون</h6>
                                     <div class="columns-style">
                                         <label for="">
                                             <input type="checkbox" name="" id="">
                                             آخرین
-                                            
+
                                         </label>
                                         <label for=""><input type="checkbox" name="" id=""> تغییر
-                                            
+
                                         </label>
                                         <label for=""><input type="checkbox" name="" id=""> درصد تغییر
-                                            
+
                                         </label>
                                         <label for=""><input type="checkbox" name="" id=""> حجم
-                                            
+
                                         </label>
                                         <label for=""><input type="checkbox" name="" id=""> ساعت های طولانی
-                                            
+
                                         </label>
-    
+
                                     </div>
                                     <div class="dropdown-divider"></div>
-    
+
                                     <h6>نمایش برند</h6>
                                     <div class="columns-style">
                                         <label for=""> <input type="checkbox" name="" id=""> لوگو
-                                            
+
                                         </label>
                                         <label for=""><input type="radio" name="" id=""> تیک
-                                            
+
                                         </label>
                                         <label for=""><input type="radio" name="" id=""> توضیحات
-                                            
+
                                         </label>
-                                        
-    
+
+
                                     </div>
                                 </ul>
-    
-                            <!-- </div> -->
-                        </div>
-                   
 
-
-                       
-
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            لیست پیگیری
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right text-right " style="width: 140%;">
-                            <div class="item-flex-re">
-                                <a class="dropdown-item" type="button"><i class="fas fa-thin fa-file-circle-plus "></i>افزودن لیست جدید</a>
-                                
-                            </div>
-                            <div class="item-flex-re">
-                                <a class="dropdown-item" type="button"> <i class="fa-solid fa-arrow-up-from-bracket" ></i>آپلود لیست</a>
-                                
-                            </div>
-                            <div class="dropdown-divider"></div>
-                            <div class="item-flex">
-                                <a class="dropdown-item" type="button">لیست پیگیری <span >33</span></a> 
-                                
-                            </div>
-                            <div class="dropdown-divider"></div>
-                            <div class="item-flex">
-                                <a class="dropdown-item" type="button">حذف شده ها  <span >3</span></a>
-                               
                             </div>
 
                         </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                لیست پیگیری
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right text-right " style="width: 140%;">
+                                <div class="item-flex-re">
+                                    <a class="dropdown-item" type="button"><i
+                                            class="fas fa-thin fa-file-circle-plus "></i>افزودن لیست جدید</a>
+
+                                </div>
+                                <div class="item-flex-re">
+                                    <a class="dropdown-item" type="button"> <i
+                                            class="fa-solid fa-arrow-up-from-bracket"></i>آپلود لیست</a>
+
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <div class="item-flex">
+                                    <a class="dropdown-item" type="button">لیست پیگیری <span>33</span></a>
+
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <div class="item-flex">
+                                    <a class="dropdown-item" type="button">حذف شده ها <span>3</span></a>
+
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
+
+                    <table class="table table-condensed table-striped table-drag">
+                        <thead class="main-head">
+                            <tr>
+                                <th style="width: 25%;">برند</th>
+                                <th style="width: 25%;">آخرین</th>
+                                <th style="width: 25%;">سی اچ جی</th>
+                                <th style="width: 25%;">درصد سی اچ جی</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="main-body">
+                            <tr onclick="test('first-row')" class="first-row tr-row category" data-toggle="collapse"
+                                data-target="#demo1" class="accordion-toggle  collapsed">
+                                <td span="4"><i class="fa-solid fa-chevron-down"></i><span>Carlos</span></td>
+                            </tr>
+
+
+                            <tr class="tr-row mgo" data-toggle="collapse" class="accordion-toggle" data-target="#demo10">
+                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>MNM</td>
+                                <td>786 </td>
+                                <td>890</td>
+                                <td>89%</td>
+                            </tr>
+
+                            <tr class="tr-row mgo">
+                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>SDF</td>
+                                <td>786 </td>
+                                <td>89</td>
+                                <td>86%</td>
+                            </tr>
+
+                            <tr class="tr-row mgo">
+                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>BVC</td>
+                                <td>76 </td>
+                                <td>89</td>
+                                <td>90%</td>
+                            </tr>
+
+                            <tr class="tr-row mgo">
+                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>NBH</td>
+                                <td>786 </td>
+                                <td>890</td>
+                                <td>89%</td>
+                            </tr>
+
+
+                            <tr onclick="test('second-row')" class="second-row tr-row category" data-toggle="collapse"
+                                data-target="#demo2" class="accordion-toggle  collapsed">
+                                <td span="4"><i class="fa-solid fa-chevron-down"></i><span>Silvio</span></td>
+
+                            </tr>
+
+                            <tr class="tr-row mgo" data-toggle="collapse" class="accordion-toggle" data-target="#demo10">
+                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>RTY</td>
+                                <td>76 </td>
+                                <td>89</td>
+                                <td>89%</td>
+                            </tr>
+
+                            <tr class="tr-row mgo">
+                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>SUY</td>
+                                <td>786 </td>
+                                <td>890</td>
+                                <td>89%</td>
+                            </tr>
+
+                            <tr class="tr-row mgo">
+                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>KJU</td>
+                                <td>76 </td>
+                                <td>90</td>
+                                <td>89%</td>
+                            </tr>
+
+                            <tr class="tr-row mgo">
+                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>KIU</td>
+                                <td>786 </td>
+                                <td>80</td>
+                                <td>89%</td>
+                            </tr>
+
+
+                            <tr onclick="test('third-row')" class="third-row tr-row category" data-toggle="collapse"
+                                data-target="#demo3" class="accordion-toggle  collapsed">
+                                <td span="4"><i class="fa-solid fa-chevron-down"></i><span>John</span></td>
+
+                            </tr>
+
+                            <tr class="tr-row mgo" data-toggle="collapse" class="accordion-toggle" data-target="#demo10">
+                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>POI</td>
+                                <td>09 </td>
+                                <td>890</td>
+                                <td>78%</td>
+                            </tr>
+
+                            <tr class="tr-row mgo">
+                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>POL</td>
+                                <td>97 </td>
+                                <td>78</td>
+                                <td>9%</td>
+                            </tr>
+
+                            <tr class="tr-row mgo">
+                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>PIU</td>
+                                <td>98 </td>
+                                <td>7</td>
+                                <td>89%</td>
+                            </tr>
+
+                            <tr class="tr-row mgo">
+                                <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>IUO</td>
+                                <td>54 </td>
+                                <td>3</td>
+                                <td>8%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- </div>                 -->
                 </div>
-
-                <table class="table table-condensed table-striped table-drag" >
-                    <thead class="main-head">
-                        <tr>
-                            <th style="width: 25%;">برند</th>
-                            <th style="width: 25%;">آخرین</th>
-                            <th style="width: 25%;">سی اچ جی</th>
-                            <th style="width: 25%;">درصد سی اچ جی</th>
-                        </tr>
-                    </thead>
-
-                    <tbody class="main-body">
-                        <tr onclick="test('first-row')" class="first-row tr-row category" data-toggle="collapse" data-target="#demo1" class="accordion-toggle  collapsed">
-                            <td span="4"><i class="fa-solid fa-chevron-down"></i><span>Carlos</span></td>
-                        </tr>
-
-
-                        <tr class="tr-row" data-toggle="collapse" class="accordion-toggle" data-target="#demo10">
-                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>MNM</td>
-                            <td>U$8.00000 </td>
-                            <td> /09/27</td>
-                            <td> /09/27</td>
-                        </tr>
-
-                        <tr class="tr-row">
-                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>SDF</td>
-                            <td>U$8.00000 </td>
-                            <td> 2016//27</td>
-                            <td> 2017//27</td>
-                        </tr>
-
-                        <tr class="tr-row">
-                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>BVC</td>
-                            <td>U$8.00000 </td>
-                            <td> 2016/09/</td>
-                            <td> 2017/09/</td>
-                        </tr>
-
-                        <tr class="tr-row">
-                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>NBH</td>
-                            <td>U$8.00000 </td>
-                            <td> 2016/09/27</td>
-                            <td> 2017/09/27</td>
-                        </tr>
-
-
-                        <tr onclick="test('second-row')" class="second-row tr-row category" data-toggle="collapse" data-target="#demo2" class="accordion-toggle  collapsed">
-                            <td span="4"><i class="fa-solid fa-chevron-down"></i><span>Silvio</span></td>
-                           
-                        </tr>
-
-                        <tr class="tr-row" data-toggle="collapse" class="accordion-toggle" data-target="#demo10">
-                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>RTY</td>
-                            <td>U$8.00000 </td>
-                            <td> 2016/09/27</td>
-                            <td> 2017/09/27</td>
-                        </tr>
-
-                        <tr class="tr-row">
-                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>SUY</td>
-                            <td>U$8.00000 </td>
-                            <td> 2016/09/27</td>
-                            <td> 2017/09/27</td>
-                        </tr>
-
-                        <tr class="tr-row">
-                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>KJU</td>
-                            <td>U$8.00000 </td>
-                            <td> 2016/09/27</td>
-                            <td> 2017/09/27</td>
-                        </tr>
-
-                        <tr class="tr-row">
-                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>KIU</td>
-                            <td>U$8.00000 </td>
-                            <td> 2018/09/28</td>
-                            <td> 2017/09/27</td>
-                        </tr>
-
-
-                        <tr onclick="test('third-row')" class="third-row tr-row category" data-toggle="collapse" data-target="#demo3" class="accordion-toggle  collapsed">
-                            <td span="4"><i class="fa-solid fa-chevron-down"></i><span>John</span></td>
-                            
-                        </tr>
-
-                        <tr class="tr-row" data-toggle="collapse" class="accordion-toggle" data-target="#demo10">
-                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>POI</td>
-                            <td>U$8.00000 </td>
-                            <td> 2016/09/27</td>
-                            <td> 2017/09/27</td>
-                        </tr>
-
-                        <tr class="tr-row">
-                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>POL</td>
-                            <td>U$8.00000 </td>
-                            <td> 2016/09/27</td>
-                            <td> 2017/09/27</td>
-                        </tr>
-
-                        <tr class="tr-row">
-                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>PIU</td>
-                            <td>U$8.00000 </td>
-                            <td> 2016/09/27</td>
-                            <td> 2017/09/27</td>
-                        </tr>
-
-                        <tr class="tr-row">
-                            <td><span><img class="table-logo-img" src="./logo.png" alt=""></span>IUO</td>
-                            <td>U$8.00000 </td>
-                            <td> 2016/09/27</td>
-                            <td> 2017/09/27</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="resizer-y"></div>
+                <!-- <div class="div2" style="flex: 66.66%;"> -->
+                <div class="div2" style="flex: 0.66%;">
+                    <p>div 2</p>
+                </div>
             </div>
+
+            <div class="resizer-x"></div>
+            <div class="div0" style="flex: 50%;">
+                <p>div 0</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-container">
+        <div class="main-flax">
+
+
+
+
         </div>
 
 
@@ -279,7 +312,7 @@
     <script src="bootstrap-4.6.2/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqgrid/4.6.0/plugins/jquery.tablednd.js"></script>
-
+    <script src="./src/js/main.js"></script>
 
     <script>
 
@@ -312,12 +345,12 @@
                     } else {
                         div.classList.add('hidden');
                     }
-                    
+
                 }
             }
         }
 
-        
+
     </script>
 
     <script type="text/javascript">
@@ -329,7 +362,7 @@
             $('.dropdown-toggle').dropdown();
 
 
-                       
+
         });
 
         function toggleSettingDropdown() {
@@ -341,7 +374,7 @@
             }
         }
 
-  
+
     </script>
 </body>
 
