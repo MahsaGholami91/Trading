@@ -2,20 +2,20 @@
     font-family: 'Bold';
     font-style: normal;
     font-weight: bold;
-    src: url('../../font/IRANSans-Bold-web.eot'),
-        url('../../font/IRANSansWeb(FaNum)_Bold.woff2') format('woff2'),
-        url('../../font/IRANSansWeb(FaNum)_Bold.woff') format('woff'),
-        url('../../font/IRANSansWeb(FaNum)_Bold.ttf') format('truetype');
+    src: url('../font/IRANSans-Bold-web.eot'),
+        url('../font/IRANSansWeb(FaNum)_Bold.woff2') format('woff2'),
+        url('../font/IRANSansWeb(FaNum)_Bold.woff') format('woff'),
+        url('../font/IRANSansWeb(FaNum)_Bold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'iransans';
     font-style: normal;
     font-weight: normal;
-    src: url('../../font/IRANSansWeb(FaNum)_Light.eot'),
-        url('../../font/IRANSansWeb(FaNum)_Light.woff2') format('woff2'),
-        url('../../font/IRANSans-web.woff') format('woff'),
-        url('../../font/IRANSans-Light-web.ttf') format('truetype');
+    src: url('../font/IRANSansWeb(FaNum)_Light.eot'),
+        url('../font/IRANSansWeb(FaNum)_Light.woff2') format('woff2'),
+        url('../font/IRANSans-web.woff') format('woff'),
+        url('../font/IRANSans-Light-web.ttf') format('truetype');
 }
 
 * {
@@ -24,10 +24,7 @@
     font-size: 14px;
 }
 
-.main-container {
-    /* background-color: #ddd; */
 
-}
 
 .header {
     border: 1px solid #ddd;
@@ -45,25 +42,6 @@
     border: 1px solid #ddd;
 }
 
-/* .menubar ul {
-    padding: 5px;
-    list-style: none;
-    margin-bottom: 0;
- }
- .menubar ul > li {
-    padding: 2px;
-    text-align: center;
-    width: 25px;
-    height: 25px;
-}
-
-.menubar ul > li > a{
-}
-.menubar ul > li > a > i{vertical-align: middle;}
-.menubar ul > li:hover{
-    background-color: #ddd;
-    border-radius: 5px;
-}  */
 .sideBar {
     display: flex;
 }
@@ -76,7 +54,6 @@
 .watching-list {
     flex: 1;
     padding: 0 10px;
-    /* background-color: #fff; */
 }
 
 .watching-list .setting {
@@ -127,22 +104,6 @@
     border-radius: 0px;
 }
 
-/* .watching-list .setting .left-side .btn-setting ul .setting-content {
-    display: none;
-    position: absolute;
-    left: 185px;
-    z-index: 1000;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    font-size: 14px;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, .15);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-} */
 .fas .fa-solid .fa-ellipsis .fa-xl::after {
     content: unset;
 }
@@ -199,14 +160,11 @@
     display: flex;
     justify-content: flex-start;
     gap: 10px;
-    /* border-bottom: 1px solid #dee2e6; */
 }
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: unset !important;
 }
-.table-striped tbody tr {
-    /* background-color: #fff !important; */
-}
+
 
 .table th,
 .table td {
@@ -232,9 +190,7 @@
     border-radius: 50%;
 }
 
-/* .hidden-tr {
-    border-bottom: 1px solid #dee2e6;
-} */
+
 .hidden-tr .hiddenRow {
     padding: 0 !important;
 }
@@ -248,13 +204,7 @@
     padding-left: 5px;
 }
 
-/* .custom-switch .custom-control-label::after {
-    left: calc(-20rem + 2px) !important;
-   
-}
-.custom-switch .custom-control-label::before {
-    left: -20rem !important;
-} */
+
 
 .columns-style {
     display: flex;
@@ -380,9 +330,7 @@ h6 {
     padding: 5px;
 }
 
-/* .item-flex-re i {
-    padding: 2px;
-} */
+
 
 .item-flex {
     padding: 5px;
@@ -513,7 +461,6 @@ thead.main-head {
     display: flex;
     flex-direction: column;
     margin-left: 1px;
-    /* background-color: #fff; */
     align-items: center;
     padding: 5px;
 }
@@ -599,17 +546,7 @@ body {
   overflow: hidden;
 }
 
-/* .div0 {
-  background: #fff;
-} */
 
-/* .div1 {
-  background: pink;
-} */
-
-/* .div2 {
-    background: #fff;
-} */
 
 .div0 p,
 .div1 p,
@@ -675,7 +612,6 @@ label {
     overflow: hidden;
     position: relative;
     transition: all 0.3s ease;
-    /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
     display: block;
 }
 
@@ -739,10 +675,7 @@ label {
     left: 20px;
 }
 
-.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
-    /*background: #66BB6A; */
-    /*color: #fff;*/
-}
+
 
 .btn-color-mode-switch input[type="checkbox"]:checked ~ .alert{
     display: block;
