@@ -176,31 +176,25 @@ function colorModePreview(ele) {
 
 // End dark mode
 
+// for drag drop between tables
 
-
-function test(classname) {
-    // Get all div elements
+function mgo(classname) {
     const divs = document.querySelectorAll('.tr-row');
 
-    // Initialize variables to keep track of the first 'first' class and first 'stop' class
     let firstFound = false;
     let stopFound = false;
 
-    // Loop through the div elements
     for (const div of divs) {
 
         console.log(div.classList);
         console.log(classname);
         console.log(div.classList.contains(classname));
         if (div.classList.contains(classname)) {
-            // If the div has the 'first' class, mark it as found
             firstFound = true;
         } else if (firstFound && div.classList.contains('category')) {
-            // If the div has the 'stop' class, mark it as found and break the loop
             stopFound = true;
             break;
         } else if (firstFound && !stopFound) {
-            // If 'first' class is found and 'stop' class is not found yet, add 'active' class to 'flow' divs
             if (div.classList.contains('hidden')) {
                 div.classList.remove('hidden');
             } else {
@@ -211,18 +205,17 @@ function test(classname) {
     }
 }
 
-
+// for drag and drop
 $(document).ready(function () {
-    // Initialise the table
     $(".table-drag").tableDnD();
 
-
+// for drop dow watch list
     $('.dropdown-toggle').dropdown();
 
 
 
 });
-
+// dropdown for ... icon
 function toggleSettingDropdown() {
     var dropdown = document.getElementById("setting-dropdown");
     if (dropdown.style.display === "block") {
@@ -231,3 +224,34 @@ function toggleSettingDropdown() {
         dropdown.style.display = "block";
     }
 }
+
+
+//    remove row of the table
+$(document).ready(function() {
+    $('.remove-icon').click(function() {
+        $(this).closest('tr').remove();
+    });
+});
+
+// tooltip
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+
+
+// display none for watchlist
+function pageToggle() {
+    $('#hide-watchlist').toggleClass('hide-watchlist');
+
+    $('.toggel-page').toggleClass('active-right-menu');
+
+};
+
+// for value text in top of the page
+$(document).ready(function () {
+    $('.coin-name').click(function () {
+        var rowData = $(this).text() + '|' + "نقره";
+
+        $('#textInput').val(rowData);
+    });
+});

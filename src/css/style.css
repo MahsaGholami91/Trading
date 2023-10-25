@@ -549,17 +549,6 @@ body {
 
 
 
-/* .div0 p,
-.div1 p,
-.div2 p {
-  font-size: 2rem;
-  margin-left: 1em;
-  text-transform: uppercase;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-} */
-
 .left-dropdown {
     right: -210px !important;
     left: unset !important;
@@ -686,11 +675,27 @@ label {
 .dark-preview{
     background: #0d0d0d;
 }
-
+.dark-preview .watch-value > i {
+    color: #fff ;
+}
+.dark-preview .value-watchlist {
+     background: #495057;
+     color: #fff;
+     border: 1px solid #495057;
+    }
 .dark-preview div.btn-container i.fa-sun-o{
     color: #777;
 }
-
+.dark-preview .active-right-menu {
+    background-color: #053b86;
+    color: #007bff;
+}
+.dark-preview tr.tr-row.mgo:hover {
+    background-color: #495057 !important;
+}
+.dark-preview tr.tr-row.mgo:active {
+    background-color: #4875a1 !important;
+}
 .dark-preview div.btn-container i.fa-moon-o{
     color: #fff;
     text-shadow: 0px 0px 11px #fff;
@@ -846,7 +851,7 @@ p.by a{
 }
 
 .dark-preview .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner {
-    background: #ccc;
+    background: #2196F3;
 }
 .dark-preview .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after {
     left: 28px;
@@ -911,3 +916,25 @@ tr.tr-row.mgo:hover .delete-icon {
     gap: 25px;
     margin: 5px;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #5f5e5e; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #505050; 
+  }
