@@ -43,7 +43,9 @@
 .sideBar {
     display: flex;
 }
-
+.category {
+    cursor: pointer !important;
+}
 .main-flax {
     display: flex;
     justify-content: flex-start;
