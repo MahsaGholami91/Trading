@@ -24,8 +24,6 @@
     font-size: 14px;
 }
 
-
-
 .header {
     border: 1px solid #ddd;
     padding: 10px;
@@ -74,7 +72,7 @@
 .menubar a {
     padding: 8px;
     margin-bottom: 10px;
-    color: #7a7b82;
+    /* color: #7a7b82; */
     border-radius: 5px;
     width: 40px;
     height: 40px;
@@ -94,6 +92,7 @@
 .menubar a:active {
     background-color: #e1edfe;
     border-radius: 5px;
+    color: #4f00ff;
 }
 
 .watching-list .setting .left-side .btn-setting ul {
@@ -168,8 +167,8 @@
 
 .table th,
 .table td {
-    padding: 5px 0 !important;
-    border-top: none !important;
+    padding: 5px 0;
+    border-top: none;
 }
 
 .hiddenTable .hiddenBody tr>td {
@@ -177,11 +176,11 @@
 }
 
 .main-head tr>th {
-    width: 25%;
+    width: 15%;
 }
 
 .hiddenTable .hiddenBody tr>td {
-    width: 25%;
+    width: 15%;
 }
 
 .table-logo-img {
@@ -439,6 +438,7 @@ thead.main-head {
     font-size: 14px;
     border-bottom: 1px solid #dee2e6;
     vertical-align: bottom !important;
+    cursor:  pointer !important;
 }
 
 .item-flex-re >a ,.item-flex >a{
@@ -548,7 +548,7 @@ body {
 
 
 
-.div0 p,
+/* .div0 p,
 .div1 p,
 .div2 p {
   font-size: 2rem;
@@ -557,7 +557,7 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-}
+} */
 
 .left-dropdown {
     right: -410px !important;
@@ -854,16 +854,59 @@ p.by a{
 
 
 
+tr.tr-row.mgo:hover {
+    background-color: #f0f2fa !important;
+}
+tr.tr-row.mgo:active {
+    border-bottom: 2px solid blue;
+}
 
-
-
-
-
-
-
-
+.delete-icon {
+    display: none;
+}
+.bookmark-icon {
+    display: none;
+}
+td.td-rel {
+    position: relative;
+}
+.delete-icon.td-abs {
+    position: absolute;
+    left: 0;
+}
+.bookmark-icon.td-abs {
+    position: absolute;
+    right: 0;
+}
+tr.tr-row.mgo:hover .bookmark-icon {
+    display: inline;
+}
+tr.tr-row.mgo:hover .delete-icon {
+    display: inline;
+    border-bottom: none;
+}
+.hide-watchlist {
+    display: none;
+}
 
 
 #setting-dropdown {
     top: 70 !important;
+}
+
+.active-right-menu {
+    background-color: #e1edfe;
+    border-radius: 5px;
+    color: #4f00ff;
+}
+
+
+.pr-15 {
+    padding-right: 15px !important;
+}
+.watch-value {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 5px;
 }
