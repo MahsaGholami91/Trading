@@ -35,11 +35,23 @@
     margin-left: 1px;
     background-color: #fff;
     align-items: center;
-    padding: 5px;
     justify-content: space-between;
     border: 1px solid #ddd;
 }
+.resizable-div {
+    height: 80%; 
+    overflow: auto;
+    resize: block; 
+}
 
+.scrollable-table {
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
 .sideBar {
     display: flex;
 }
@@ -54,6 +66,7 @@
 .watching-list {
     flex: 1;
     padding: 0 10px;
+    
 }
 
 .watching-list .setting {
@@ -74,7 +87,6 @@
 .menubar a {
     padding: 8px;
     margin-bottom: 10px;
-    /* color: #7a7b82; */
     border-radius: 5px;
     width: 40px;
     height: 40px;
@@ -305,7 +317,6 @@ label {
     font-size: 16px;
 }
 
-/* /// */
 
 .h1,
 .h2,
@@ -546,7 +557,7 @@ body {
 .div0,
 .div1,
 .div2 {
-  overflow: auto;
+  overflow: hidden;
 }
 
 
@@ -554,6 +565,8 @@ body {
 .left-dropdown {
     right: -210px !important;
     left: unset !important;
+    transform: unset !important;
+    top: unset !important;
 }
 
 
@@ -565,9 +578,7 @@ html, body{
     margin: 0px;
 }
 
-body{
-    display: table;
-}
+
 
 /*switch styles*/
 
@@ -893,7 +904,7 @@ tr.tr-row.mgo:hover .delete-icon {
     display: inline;
     border-bottom: none;
 }
-.hide-watchlist {
+.hideWatchlist {
     display: none;
 }
 

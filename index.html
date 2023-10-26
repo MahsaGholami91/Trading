@@ -18,7 +18,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqgrid/4.6.0/plugins/jquery.tablednd.js"></script>
 
-
 </head>
 
 <body class="white-preview">
@@ -59,12 +58,14 @@
 
 
             <!-- table blok -->
-            <div class="resizable-y" style="flex: 50%;" id="hide-watchlist">
-                <div class="div1 watching-list" style="flex: 90%;">
+            <div class="resizable-y" style="" id="hideWatchlist">
+                <div class="div1 watching-list" style="" id="div1">
                     <div class="watch-value">
                         <i class="fa-solid fa-angle-left"></i>
-                        <input type="text" class="form-control text-right value-watchlist" id="textInput" placeholder=""
-                            readonly style="width: 100%;">
+                        <div class="form-control text-right value-watchlist" id="textInput">
+                        </div>
+
+                        <!-- <input type="text" class="form-control text-right value-watchlist" id="textInput" placeholder="" readonly style="width: 100%;"> -->
                     </div>
                     <div class="setting">
                         <div class="left-side">
@@ -79,7 +80,7 @@
 
                                 <ul class="left-dropdown dropdown-menu dropdown-menu-right text-right setting-content"
                                     id="setting-dropdown"
-                                    style="box-shadow: 0 6px 12px rgba(0, 0, 0, .175) !important; ">
+                                    style="box-shadow: 0 6px 12px rgba(0, 0, 0, .175) !important;  ">
                                     <li>
                                         <a href="">
                                             <span class="fas fa-copy"></span> کپی فایل
@@ -187,261 +188,266 @@
                             </div>
                         </div>
                     </div>
-                    <table class="table table-condensed table-striped table-drag" id="myTable">
-                        <thead class="main-head">
-                            <tr>
+                    <div class="resizable-div">
+                        <table class="scrollable-table table table-condensed table-striped table-drag" id="myTable">
+                            <thead class="main-head">
+                                <tr>
 
-                                <th><i class="fa-solid fa-bookmark fa-rotate-90"></i>
-                                    برند</th>
-                                <th>آخرین</th>
-                                <th>سی اچ جی</th>
-                                <th>درصد سی اچ جی</th>
-                            </tr>
-                        </thead>
+                                    <th><i class="fa-solid fa-bookmark fa-rotate-90"></i>
+                                        برند</th>
+                                    <th>آخرین</th>
+                                    <th>سی اچ جی</th>
+                                    <th>درصد سی اچ جی</th>
+                                </tr>
+                            </thead>
 
-                        <tbody class="main-body">
-                            <tr onclick="mgo('first-row')" class="first-row tr-row category" data-toggle="collapse"
-                                data-target="#tbl1" class="accordion-toggle  collapsed">
-                                <td span="4"><i class="fa-solid fa-chevron-down"></i><span>Carlos</span></td>
-                            </tr>
-
-
-                            <tr class="tr-row mgo" data-toggle="collapse" class="accordion-toggle" data-target="#tbl4">
-                                <td class="td-rel pr-15">
-                                    <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
-                                    <span class="coin-name">MNM</span>
-                                    <div class="bookmark-icon td-abs">
-                                        <i class="fa-solid fa-bookmark fa-rotate-90"></i>
-                                    </div>
-                                </td>
-                                <td>786 </td>
-                                <td>890</td>
-                                <td class="td-rel remove-icon">
-                                    <span>80%</span>
-                                    <div class="delete-icon td-abs">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr class="tr-row mgo">
-                                <td class="td-rel pr-15">
-                                    <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
-                                    <span class="coin-name">PIOI</span>
-                                    <div class="bookmark-icon td-abs">
-                                        <i class="fa-solid fa-bookmark fa-rotate-90"></i>
-                                    </div>
-                                </td>
-                                <td>786 </td>
-                                <td>89</td>
-                                <td class="td-rel  remove-icon">
-                                    <span>80%</span>
-                                    <div class="delete-icon td-abs">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr class="tr-row mgo">
-                                <td class="td-rel pr-15">
-                                    <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
-                                    <span class="coin-name">POTY</span>
-                                    <div class="bookmark-icon td-abs">
-                                        <i class="fa-solid fa-bookmark fa-rotate-90"></i>
-                                    </div>
-                                </td>
-                                <td>76 </td>
-                                <td>89</td>
-                                <td class="td-rel  remove-icon">
-                                    <span>80%</span>
-                                    <div class="delete-icon td-abs">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr class="tr-row mgo">
-                                <td class="td-rel pr-15">
-                                    <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
-                                    <span class="coin-name">JDJ</span>
-                                    <div class="bookmark-icon td-abs">
-                                        <i class="fa-solid fa-bookmark fa-rotate-90"></i>
-                                    </div>
-                                </td>
-                                <td>786 </td>
-                                <td>890</td>
-                                <td class="td-rel  remove-icon">
-                                    <span>80%</span>
-                                    <div class="delete-icon td-abs">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </div>
-                                </td>
-                            </tr>
+                            <tbody class="main-body">
+                                <tr onclick="mgo('first-row')" class="first-row tr-row category" data-toggle="collapse"
+                                    data-target="#tbl1" class="accordion-toggle  collapsed">
+                                    <td span="4"><i class="fa-solid fa-chevron-down"></i><span>Carlos</span></td>
+                                </tr>
 
 
-                            <tr onclick="mgo('second-row')" class="second-row tr-row category" data-toggle="collapse"
-                                data-target="#tbl2" class="accordion-toggle  collapsed">
-                                <td span="4"><i class="fa-solid fa-chevron-down"></i><span>Silvio</span></td>
+                                <tr class="tr-row mgo" data-toggle="collapse" class="accordion-toggle"
+                                    data-target="#tbl4">
+                                    <td class="td-rel pr-15">
+                                        <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
+                                        <span class="coin-name">MNM</span>
+                                        <div class="bookmark-icon td-abs">
+                                            <i class="fa-solid fa-bookmark fa-rotate-90"></i>
+                                        </div>
+                                    </td>
+                                    <td>786 </td>
+                                    <td>890</td>
+                                    <td class="td-rel remove-icon">
+                                        <span>80%</span>
+                                        <div class="delete-icon td-abs">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                    </td>
+                                </tr>
 
-                            </tr>
+                                <tr class="tr-row mgo">
+                                    <td class="td-rel pr-15">
+                                        <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
+                                        <span class="coin-name">PIOI</span>
+                                        <div class="bookmark-icon td-abs">
+                                            <i class="fa-solid fa-bookmark fa-rotate-90"></i>
+                                        </div>
+                                    </td>
+                                    <td>786 </td>
+                                    <td>89</td>
+                                    <td class="td-rel  remove-icon">
+                                        <span>80%</span>
+                                        <div class="delete-icon td-abs">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                    </td>
+                                </tr>
 
-                            <tr class="tr-row mgo" data-toggle="collapse" class="accordion-toggle" data-target="#tbl4">
-                                <td class="td-rel pr-15">
-                                    <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
-                                    <span class="coin-name">VDF</span>
-                                    <div class="bookmark-icon td-abs">
-                                        <i class="fa-solid fa-bookmark fa-rotate-90"></i>
-                                    </div>
-                                </td>
-                                <td>76 </td>
-                                <td>89</td>
-                                <td class="td-rel  remove-icon">
-                                    <span>80%</span>
-                                    <div class="delete-icon td-abs">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </div>
-                                </td>
-                            </tr>
+                                <tr class="tr-row mgo">
+                                    <td class="td-rel pr-15">
+                                        <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
+                                        <span class="coin-name">POTY</span>
+                                        <div class="bookmark-icon td-abs">
+                                            <i class="fa-solid fa-bookmark fa-rotate-90"></i>
+                                        </div>
+                                    </td>
+                                    <td>76 </td>
+                                    <td>89</td>
+                                    <td class="td-rel  remove-icon">
+                                        <span>80%</span>
+                                        <div class="delete-icon td-abs">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                    </td>
+                                </tr>
 
-                            <tr class="tr-row mgo">
-                                <td class="td-rel pr-15">
-                                    <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
-                                    <span class="coin-name">SDERE</span>
-                                    <div class="bookmark-icon td-abs">
-                                        <i class="fa-solid fa-bookmark fa-rotate-90"></i>
-                                    </div>
-                                </td>
-                                <td>786 </td>
-                                <td>890</td>
-                                <td class="td-rel  remove-icon">
-                                    <span>80%</span>
-                                    <div class="delete-icon td-abs">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr class="tr-row mgo">
-                                <td class="td-rel pr-15">
-                                    <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
-                                    <span class="coin-name">DSD</span>
-                                    <div class="bookmark-icon td-abs">
-                                        <i class="fa-solid fa-bookmark fa-rotate-90"></i>
-                                    </div>
-                                </td>
-                                <td>76 </td>
-                                <td>90</td>
-                                <td class="td-rel  remove-icon">
-                                    <span>80%</span>
-                                    <div class="delete-icon td-abs">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr class="tr-row mgo">
-                                <td class="td-rel pr-15">
-                                    <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
-                                    <span class="coin-name">T5YH</span>
-                                    <div class="bookmark-icon td-abs">
-                                        <i class="fa-solid fa-bookmark fa-rotate-90"></i>
-                                    </div>
-                                </td>
-                                <td>786 </td>
-                                <td>80</td>
-                                <td class="td-rel  remove-icon">
-                                    <span>80%</span>
-                                    <div class="delete-icon td-abs">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </div>
-                                </td>
-                            </tr>
+                                <tr class="tr-row mgo">
+                                    <td class="td-rel pr-15">
+                                        <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
+                                        <span class="coin-name">JDJ</span>
+                                        <div class="bookmark-icon td-abs">
+                                            <i class="fa-solid fa-bookmark fa-rotate-90"></i>
+                                        </div>
+                                    </td>
+                                    <td>786 </td>
+                                    <td>890</td>
+                                    <td class="td-rel  remove-icon">
+                                        <span>80%</span>
+                                        <div class="delete-icon td-abs">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                    </td>
+                                </tr>
 
 
-                            <tr onclick="mgo('third-row')" class="third-row tr-row category" data-toggle="collapse"
-                                data-target="#tbl3" class="accordion-toggle  collapsed">
-                                <td span="4"><i class="fa-solid fa-chevron-down"></i><span>John</span></td>
+                                <tr onclick="mgo('second-row')" class="second-row tr-row category"
+                                    data-toggle="collapse" data-target="#tbl2" class="accordion-toggle  collapsed">
+                                    <td span="4"><i class="fa-solid fa-chevron-down"></i><span>Silvio</span></td>
 
-                            </tr>
+                                </tr>
 
-                            <tr class="tr-row mgo" data-toggle="collapse" class="accordion-toggle" data-target="#tbl4">
-                                <td class="td-rel pr-15">
-                                    <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
-                                    <span class="coin-name">SDSDS</span>
-                                    <div class="bookmark-icon td-abs">
-                                        <i class="fa-solid fa-bookmark fa-rotate-90"></i>
-                                    </div>
-                                </td>
-                                <td>09 </td>
-                                <td>890</td>
-                                <td class="td-rel  remove-icon">
-                                    <span>80%</span>
-                                    <div class="delete-icon td-abs">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </div>
-                                </td>
-                            </tr>
+                                <tr class="tr-row mgo" data-toggle="collapse" class="accordion-toggle"
+                                    data-target="#tbl4">
+                                    <td class="td-rel pr-15">
+                                        <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
+                                        <span class="coin-name">VDF</span>
+                                        <div class="bookmark-icon td-abs">
+                                            <i class="fa-solid fa-bookmark fa-rotate-90"></i>
+                                        </div>
+                                    </td>
+                                    <td>76 </td>
+                                    <td>89</td>
+                                    <td class="td-rel  remove-icon">
+                                        <span>80%</span>
+                                        <div class="delete-icon td-abs">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                    </td>
+                                </tr>
 
-                            <tr class="tr-row mgo">
-                                <td class="td-rel pr-15">
-                                    <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
-                                    <span class="coin-name">SAEERE</span>
-                                    <div class="bookmark-icon td-abs">
-                                        <i class="fa-solid fa-bookmark fa-rotate-90"></i>
-                                    </div>
-                                </td>
-                                <td>97 </td>
-                                <td>78</td>
-                                <td class="td-rel  remove-icon">
-                                    <span>80%</span>
-                                    <div class="delete-icon td-abs">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </div>
-                                </td>
-                            </tr>
+                                <tr class="tr-row mgo">
+                                    <td class="td-rel pr-15">
+                                        <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
+                                        <span class="coin-name">SDERE</span>
+                                        <div class="bookmark-icon td-abs">
+                                            <i class="fa-solid fa-bookmark fa-rotate-90"></i>
+                                        </div>
+                                    </td>
+                                    <td>786 </td>
+                                    <td>890</td>
+                                    <td class="td-rel  remove-icon">
+                                        <span>80%</span>
+                                        <div class="delete-icon td-abs">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                    </td>
+                                </tr>
 
-                            <tr class="tr-row mgo">
-                                <td class="td-rel pr-15">
-                                    <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
-                                    <span class="coin-name">GHGHF</span>
-                                    <div class="bookmark-icon td-abs">
-                                        <i class="fa-solid fa-bookmark fa-rotate-90"></i>
-                                    </div>
-                                </td>
-                                <td>98 </td>
-                                <td>7</td>
-                                <td class="td-rel  remove-icon">
-                                    <span>80%</span>
-                                    <div class="delete-icon td-abs">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </div>
-                                </td>
-                            </tr>
+                                <tr class="tr-row mgo">
+                                    <td class="td-rel pr-15">
+                                        <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
+                                        <span class="coin-name">DSD</span>
+                                        <div class="bookmark-icon td-abs">
+                                            <i class="fa-solid fa-bookmark fa-rotate-90"></i>
+                                        </div>
+                                    </td>
+                                    <td>76 </td>
+                                    <td>90</td>
+                                    <td class="td-rel  remove-icon">
+                                        <span>80%</span>
+                                        <div class="delete-icon td-abs">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                    </td>
+                                </tr>
 
-                            <tr class="tr-row mgo">
-                                <td class="td-rel pr-15">
-                                    <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
-                                    <span class="coin-name">GFG</span>
-                                    <div class="bookmark-icon td-abs">
-                                        <i class="fa-solid fa-bookmark fa-rotate-90"></i>
-                                    </div>
-                                </td>
-                                <td>54 </td>
-                                <td>3</td>
-                                <td class="td-rel remove-icon">
-                                    <span>80%</span>
-                                    <div class="delete-icon td-abs">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </div>
-                                </td>
-                            </tr>
+                                <tr class="tr-row mgo">
+                                    <td class="td-rel pr-15">
+                                        <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
+                                        <span class="coin-name">T5YH</span>
+                                        <div class="bookmark-icon td-abs">
+                                            <i class="fa-solid fa-bookmark fa-rotate-90"></i>
+                                        </div>
+                                    </td>
+                                    <td>786 </td>
+                                    <td>80</td>
+                                    <td class="td-rel  remove-icon">
+                                        <span>80%</span>
+                                        <div class="delete-icon td-abs">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                    </td>
+                                </tr>
 
-                        </tbody>
-                    </table>
+
+                                <tr onclick="mgo('third-row')" class="third-row tr-row category" data-toggle="collapse"
+                                    data-target="#tbl3" class="accordion-toggle  collapsed">
+                                    <td span="4"><i class="fa-solid fa-chevron-down"></i><span>John</span></td>
+
+                                </tr>
+
+                                <tr class="tr-row mgo" data-toggle="collapse" class="accordion-toggle"
+                                    data-target="#tbl4">
+                                    <td class="td-rel pr-15">
+                                        <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
+                                        <span class="coin-name">SDSDS</span>
+                                        <div class="bookmark-icon td-abs">
+                                            <i class="fa-solid fa-bookmark fa-rotate-90"></i>
+                                        </div>
+                                    </td>
+                                    <td>09 </td>
+                                    <td>890</td>
+                                    <td class="td-rel  remove-icon">
+                                        <span>80%</span>
+                                        <div class="delete-icon td-abs">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="tr-row mgo">
+                                    <td class="td-rel pr-15">
+                                        <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
+                                        <span class="coin-name">SAEERE</span>
+                                        <div class="bookmark-icon td-abs">
+                                            <i class="fa-solid fa-bookmark fa-rotate-90"></i>
+                                        </div>
+                                    </td>
+                                    <td>97 </td>
+                                    <td>78</td>
+                                    <td class="td-rel  remove-icon">
+                                        <span>80%</span>
+                                        <div class="delete-icon td-abs">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="tr-row mgo">
+                                    <td class="td-rel pr-15">
+                                        <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
+                                        <span class="coin-name">GHGHF</span>
+                                        <div class="bookmark-icon td-abs">
+                                            <i class="fa-solid fa-bookmark fa-rotate-90"></i>
+                                        </div>
+                                    </td>
+                                    <td>98 </td>
+                                    <td>7</td>
+                                    <td class="td-rel  remove-icon">
+                                        <span>80%</span>
+                                        <div class="delete-icon td-abs">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="tr-row mgo">
+                                    <td class="td-rel pr-15">
+                                        <span><img class="table-logo-img" src="./src/image/logo.png" alt=""></span>
+                                        <span class="coin-name">GFG</span>
+                                        <div class="bookmark-icon td-abs">
+                                            <i class="fa-solid fa-bookmark fa-rotate-90"></i>
+                                        </div>
+                                    </td>
+                                    <td>54 </td>
+                                    <td>3</td>
+                                    <td class="td-rel remove-icon">
+                                        <span>80%</span>
+                                        <div class="delete-icon td-abs">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
 
                 </div>
                 <div class="resizer-y"></div>
-                <div class="div2" style="flex: 0.66%;">
+                <div class="div2" style="" id="div2">
                     <p>div 2</p>
                 </div>
             </div>
@@ -449,13 +455,34 @@
             <div class="resizer-x"></div>
 
             <!-- chart blok -->
-            <div class="div0" style="flex: 50%;">
+            <div class="div0" style="" id="div0">
                 <p>div 0</p>
             </div>
         </div>
     </div>
 
 
+    <script>
+// for set style resize after get size from user
+        function setResizableItems(item0, item1, item2, item3) {
+            $('#div0').css('flex', item0);
+            $('#div1').css('flex', item1);
+            $('#div2').css('flex', item2);
+            $('#hideWatchlist').css('flex', item3);
+        }
+// for get size from user
+        function getResizableItems() {
+            var div0 = $('#div0').css("flex");
+            var div1 = $('#div1').css("flex");
+            var div2 = $('#div2').css("flex");
+            var hideWatchlist = $('#hideWatchlist').css("flex");
+
+            console.log(div0,div1,div2,hideWatchlist);
+        }
+
+
+        setResizableItems('90%', '400px', '0.66%', '50%');
+    </script>
 
     <script src="./src/js/main.js"></script>
 

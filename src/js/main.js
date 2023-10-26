@@ -241,7 +241,7 @@ $(function () {
 
 // display none for watchlist
 function pageToggle() {
-    $('#hide-watchlist').toggleClass('hide-watchlist');
+    $('#hideWatchlist').toggleClass('hideWatchlist');
 
     $('.toggel-page').toggleClass('active-right-menu');
 
@@ -251,7 +251,7 @@ function pageToggle() {
 $(document).ready(function () {
     $('.coin-name').click(function () {
         var rowData = $(this).text() + '|' + "نقره";
-
-        $('#textInput').val(rowData);
+// console.log($(this).text());
+        $('#textInput').text(rowData);
     });
 });
